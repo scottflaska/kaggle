@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  icr:
+    build: .
+    image: icr
+    container_name: icr
+    environment:
+      - JUPYTER_TOKEN=nfl
+    ports:
+      - "10000:8888"
+    restart: always
+    volumes:
+      - .:/home/jovyan/icr
